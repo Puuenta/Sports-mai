@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Mai Training">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="icon" type="image/png" sizes="192x192" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%23ff4d00' width='192' height='192'/><text x='50%' y='50%' font-size='120' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='central'>💪</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%23ff4d00' width='180' height='180' rx='40'/><text x='50%' y='50%' font-size='100' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='central'>💪</text></svg>">
+<link rel="manifest" href="data:application/json,{%22name%22:%22Mai Training Program%22,%22short_name%22:%22Mai Training%22,%22description%22:%22Programme d'entraînement musculation mai 2026 - Haut du corps imposant%22,%22start_url%22:%22/%22,%22display%22:%22standalone%22,%22background_color%22:%22%230a0a0a%22,%22theme_color%22:%22%23ff4d00%22,%22icons%22:[{%22src%22:%22data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%23ff4d00' width='192' height='192'/><text x='50%' y='50%' font-size='120' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='central'>💪</text></svg>%22,%22sizes%22:%22192x192%22,%22type%22:%22image/svg+xml%22,%22purpose%22:%22any%22}]}">
+<title>Mai Training — Programme Musculation</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600;700&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --dark: #111318;
+    --card: #16191f;
+    --border: #1e2229;
+    --accent: #ff4d00;
+    --accent2: #ffaa00;
+    --text: #e8eaf0;
+    --muted: #7a7f8e;
+    --green: #00e676;
+    --blue: #448aff;
+  }
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+width: 100%;
+height: 100%;
+overflow-x: hidden;
+}
+
+body {
+background: var(–black);
+color: var(–text);
+font-family: ‘Barlow’, sans-serif;
+min-height: 100vh;
+overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+position: relative;
+padding: 60px 40px 50px;
+overflow: hidden;
+border-bottom: 1px solid var(–border);
+}
+.hero::before {
+content: ‘’;
+position: absolute;
+top: -60px; right: -80px;
+width: 500px; height: 500px;
+background: radial-gradient(circle, rgba(255,77,0,0.18) 0%, transparent 70%);
+pointer-events: none;
+}
+.hero-badge {
+display: inline-block;
+background: var(–accent);
+color: #fff;
+font-family: ‘Barlow Condensed’, sans-serif;
+font-size: 11px;
+font-weight: 900;
+letter-spacing: 3px;
+text-transform: uppercase;
+padding: 5px 14px;
+border-radius: 2px;
+margin-bottom: 18px;
+}
+.hero h1 {
+font-family: ‘Bebas Neue’, sans-serif;
+font-size: clamp(52px, 10vw, 100px);
+line-height: 0.9;
+letter-spacing: 2px;
+color: #fff;
+}
+.hero h1 span { color: var(–accent); }
+.hero-sub {
+margin-top: 18px;
+font-size: 15px;
+color: var(–muted);
+font-weight: 300;
+letter-spacing: 0.5px;
+max-width: 480px;
+line-height: 1.6;
+}
+.hero-stats {
+display: flex;
+gap: 30px;
+margin-top: 32px;
+flex-wrap: wrap;
+}
+.stat {
+display: flex;
+flex-direction: column;
+gap: 4px;
+}
+.stat-val {
+font-family: ‘Bebas Neue’, sans-serif;
+font-size: 36px;
+color: var(–accent);
+line-height: 1;
+}
+.stat-lbl {
+font-size: 11px;
+color: var(–muted);
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+/* LEGEND */
+.legend {
+display: flex;
+gap: 20px;
+padding: 20px 40px;
+background: var(–dark);
+border-bottom: 1px solid var(–border);
+flex-wrap: wrap;
+}
+.legend-item {
+display: flex;
+align-items: center;
+gap: 8px;
+font-size: 12px;
+color: var(–muted);
+letter-spacing: 1px;
+text-transform: uppercase;
+}
+.dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+/* MAIN */
+.container { max-width: 960px; margin: 0 auto; padding: 50px 20px; }
+
+.semaine { margin-bottom: 60px; }
+.semaine-header {
+display: flex;
+align-items: baseline;
+gap: 16px;
+margin-bottom: 20px;
+padding-bottom: 12px;
+border-bottom: 1px solid var(–border);
+flex-wrap: wrap;
+}
+.semaine-num { font-family: ‘Bebas Neue’, sans-serif; font-size: 48px; color: var(–accent); line-height: 1; }
+.semaine-title { font-family: ‘Barlow Condensed’, sans-serif; font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #fff; }
+.semaine-dates { font-size: 12px; color: var(–muted); margin-left: auto; letter-spacing: 1px; }
+
+.days-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+
+.day-card { background: var(–card); border: 1px solid var(–border); border-radius: 8px; overflow: hidden; transition: transform 0.2s, border-color 0.2s; }
+.day-card:hover { transform: translateY(-3px); border-color: #2a2d36; }
+.day-card.rest { border-style: dashed; opacity: 0.55; }
+
+.day-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid var(–border); }
+.day-name { font-family: ‘Barlow Condensed’, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(–muted); }
+.day-date { font-family: ‘Bebas Neue’, sans-serif; font-size: 22px; color: #fff; line-height: 1; }
+.day-tag { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; }
+.tag-push { background: rgba(255,77,0,0.15); color: var(–accent); }
+.tag-pull { background: rgba(68,138,255,0.15); color: var(–blue); }
+.tag-legs { background: rgba(0,230,118,0.12); color: var(–green); }
+.tag-cardio { background: rgba(255,170,0,0.15); color: var(–accent2); }
+.tag-full { background: rgba(200,100,255,0.15); color: #c87dff; }
+.tag-rest { background: rgba(122,127,142,0.12); color: var(–muted); }
+
+.day-body { padding: 14px 16px; }
+.session-title { font-family: ‘Barlow Condensed’, sans-serif; font-size: 17px; font-weight: 700; color: #fff; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
+
+.exo-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.exo-item {
+display: flex;
+flex-direction: column;
+gap: 2px;
+padding: 8px 10px;
+background: rgba(255,255,255,0.03);
+border-left: 2px solid var(–border);
+border-radius: 0 4px 4px 0;
+cursor: pointer;
+transition: border-color 0.2s, background 0.2s, transform 0.15s;
+position: relative;
+}
+.exo-item:hover { border-left-color: var(–accent); background: rgba(255,77,0,0.07); transform: translateX(2px); }
+.exo-item::after {
+content: ‘ℹ’;
+position: absolute;
+right: 8px; top: 50%; transform: translateY(-50%);
+font-size: 13px; color: var(–accent);
+opacity: 0; transition: opacity 0.2s;
+}
+.exo-item:hover::after { opacity: 1; }
+.exo-name { font-size: 13px; font-weight: 600; color: var(–text); }
+.exo-detail { font-size: 11px; color: var(–muted); font-weight: 300; letter-spacing: 0.5px; }
+.rest-text { font-size: 13px; color: var(–muted); font-style: italic; padding: 8px 0; }
+
+/* ====== MODAL ====== */
+.modal-overlay {
+display: none;
+position: fixed; inset: 0;
+background: rgba(0,0,0,0.85);
+backdrop-filter: blur(6px);
+z-index: 1000;
+align-items: center;
+justify-content: center;
+padding: 20px;
+}
+.modal-overlay.active { display: flex; }
+
+.modal {
+background: var(–dark);
+border: 1px solid var(–border);
+border-radius: 12px;
+width: 100%;
+max-width: 560px;
+max-height: 90vh;
+overflow-y: auto;
+position: relative;
+animation: modalIn 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+@keyframes modalIn {
+from { opacity: 0; transform: scale(0.88) translateY(20px); }
+to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.modal-close {
+position: sticky; top: 0;
+display: flex; justify-content: flex-end;
+padding: 14px 16px 0;
+background: var(–dark);
+z-index: 2;
+}
+.close-btn {
+background: rgba(255,255,255,0.07);
+border: none; color: var(–muted);
+width: 32px; height: 32px;
+border-radius: 50%; cursor: pointer;
+font-size: 18px; line-height: 32px; text-align: center;
+transition: background 0.2s, color 0.2s;
+}
+.close-btn:hover { background: var(–accent); color: #fff; }
+
+.modal-img-wrap {
+margin: 0 16px 0;
+border-radius: 8px;
+overflow: hidden;
+background: #0d0f14;
+min-height: 200px;
+display: flex; align-items: center; justify-content: center;
+border: 1px solid var(–border);
+position: relative;
+}
+.modal-img-wrap img {
+width: 100%; max-height: 260px;
+object-fit: contain;
+display: block;
+}
+.modal-img-placeholder {
+display: flex; flex-direction: column; align-items: center; gap: 10px;
+color: var(–muted); font-size: 13px; padding: 40px 20px;
+text-align: center;
+}
+.modal-img-placeholder span { font-size: 48px; }
+
+.modal-content { padding: 20px 20px 24px; }
+
+.modal-exo-name {
+font-family: ‘Bebas Neue’, sans-serif;
+font-size: 30px; color: #fff; letter-spacing: 1px;
+line-height: 1; margin-bottom: 4px;
+}
+.modal-series {
+font-size: 12px; color: var(–accent);
+font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+margin-bottom: 16px;
+}
+
+.modal-section-title {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-size: 13px; font-weight: 700; letter-spacing: 3px;
+text-transform: uppercase; color: var(–accent2);
+margin-bottom: 10px; margin-top: 18px;
+}
+
+.muscles-list { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 4px; }
+.muscle-tag {
+font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+padding: 3px 10px; border-radius: 20px;
+background: rgba(255,77,0,0.12); color: var(–accent);
+border: 1px solid rgba(255,77,0,0.2);
+}
+.muscle-tag.secondary { background: rgba(68,138,255,0.1); color: var(–blue); border-color: rgba(68,138,255,0.2); }
+
+.steps-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.step { display: flex; gap: 12px; align-items: flex-start; }
+.step-num {
+flex-shrink: 0;
+width: 22px; height: 22px; border-radius: 50%;
+background: var(–accent); color: #fff;
+font-size: 11px; font-weight: 700;
+display: flex; align-items: center; justify-content: center;
+margin-top: 1px;
+}
+.step p { font-size: 13px; color: var(–text); line-height: 1.6; font-weight: 300; }
+
+.tip-box {
+background: rgba(255,170,0,0.07);
+border-left: 3px solid var(–accent2);
+border-radius: 0 6px 6px 0;
+padding: 10px 14px;
+margin-top: 16px;
+}
+.tip-box p { font-size: 12px; color: var(–muted); line-height: 1.6; }
+.tip-box strong { color: var(–accent2); }
+
+/* TIPS */
+.tips-section { background: var(–dark); border: 1px solid var(–border); border-radius: 10px; padding: 30px; margin-top: 10px; }
+.tips-title { font-family: ‘Bebas Neue’, sans-serif; font-size: 32px; color: var(–accent); margin-bottom: 20px; letter-spacing: 2px; }
+.tips-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.tip-card { padding: 16px; background: var(–card); border-radius: 6px; border-left: 3px solid var(–accent); }
+.tip-card h4 { font-family: ‘Barlow Condensed’, sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(–accent2); margin-bottom: 6px; }
+.tip-card p { font-size: 12px; color: var(–muted); line-height: 1.6; font-weight: 300; }
+
+.prog-banner { background: linear-gradient(135deg, rgba(255,77,0,0.12), rgba(255,170,0,0.08)); border: 1px solid rgba(255,77,0,0.3); border-radius: 8px; padding: 20px 24px; margin-top: 40px; display: flex; align-items: center; gap: 16px; }
+.prog-icon { font-size: 28px; }
+.prog-text h4 { font-family: ‘Barlow Condensed’, sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(–accent); margin-bottom: 4px; }
+.prog-text p { font-size: 13px; color: var(–muted); line-height: 1.6; }
+
+@media (max-width: 600px) {
+.hero { padding: 40px 20px 36px; }
+.legend { padding: 16px 20px; }
+.semaine-dates { margin-left: 0; }
+.modal { max-width: 95vw; }
+}
+
+@supports (padding: max(0px)) {
+.hero { padding-bottom: calc(50px + max(0px, env(safe-area-inset-bottom))); }
+.container { padding-bottom: calc(50px + max(0px, env(safe-area-inset-bottom))); }
+}
+</style>
+
+</head>
+<body>
+
+<!-- HERO -->
+
+<div class="hero">
+  <div class="hero-badge">📱 Application PWA</div>
+  <h1>MAI <span>2026</span><br>FORCE &<br>VOLUME</h1>
+  <p class="hero-sub"><strong style="color:var(--accent)">💡 Ajoute cette app à ton écran d'accueil :</strong> Sur iPhone : appuie sur "Partager" → "Sur l'écran d'accueil". Sur Android : menu → "Installer l'application". Ensuite, clique sur un exercice pour voir comment le faire.</p>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-val">6</span><span class="stat-lbl">Séances / semaine</span></div>
+    <div class="stat"><span class="stat-val">4</span><span class="stat-lbl">Semaines</span></div>
+    <div class="stat"><span class="stat-val">0</span><span class="stat-lbl">Équipements</span></div>
+    <div class="stat"><span class="stat-val">👆</span><span class="stat-lbl">Clic = tuto exo</span></div>
+  </div>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><span class="dot" style="background:var(--accent)"></span> Push</div>
+  <div class="legend-item"><span class="dot" style="background:var(--blue)"></span> Pull</div>
+  <div class="legend-item"><span class="dot" style="background:var(--green)"></span> Jambes</div>
+  <div class="legend-item"><span class="dot" style="background:var(--accent2)"></span> Cardio</div>
+  <div class="legend-item"><span class="dot" style="background:#c87dff"></span> Full Body</div>
+</div>
+
+<div class="container">
+
+<!-- =================== SEMAINE 1 =================== -->
+
+<div class="semaine">
+  <div class="semaine-header">
+    <div class="semaine-num">S1</div>
+    <div><div class="semaine-title">Mise en route — Construire les bases</div><div style="font-size:13px;color:var(--muted);margin-top:2px">Apprendre les mouvements. 3–4 séries par exo.</div></div>
+    <div class="semaine-dates">1 – 7 Mai</div>
+  </div>
+  <div class="days-grid">
+
+```
+<div class="day-card">
+  <div class="day-header"><div><div class="day-name">Jeudi</div><div class="day-date">1 MAI</div></div><span class="day-tag tag-push">Push</span></div>
+  <div class="day-body">
+    <div class="session-title">🔥 Poitrine & Épaules</div>
+    <ul class="exo-list">
+      <li class="exo-item" onclick="openModal('pompes-classiques','4 séries × 15 reps — pause 60s')"><span class="exo-name">Pompes classiques</span><span class="exo-detail">4 séries × 15 reps — pause 60s</span></li>
+      <li class="exo-item" onclick="openModal('pompes-larges','3 séries × 12 reps')"><span class="exo-name">Pompes larges (pecs)</span><span class="exo-detail">3 séries × 12 reps</span></li>
+      <li class="exo-item" onclick="openModal('pike-push-up','4 séries × 12 reps')"><span class="exo-name">Pike push-ups (épaules)</span><span class="exo-detail">4 séries × 12 reps</span></li>
+      <li class="exo-item" onclick="openModal('dips-chaise','3 séries × 15 reps')"><span class="exo-name">Dips sur chaise</span><span class="exo-detail">3 séries × 15 reps (triceps)</span></li>
+      <li class="exo-item" onclick="openModal('pompes-diamant','3 séries × 10 reps')"><span class="exo-name">Pompes diamant</span><span class="exo-detail">3 séries × 10 reps</span></li>
+      <li class="exo-item" onclick="openModal('planche','3 × 45 secondes')"><span class="exo-name">Planche</span><span class="exo-detail">3 × 45 secondes</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header"><div><div class="day-name">Vendredi</div><div class="day-date">2 MAI</div></div><span class="day-tag tag-pull">Pull</span></div>
+  <div class="day-body">
+    <div class="session-title">💪 Dos & Biceps</div>
+    <ul class="exo-list">
+      <li class="exo-item" onclick="openModal('superman','4 séries × 15 reps')"><span class="exo-name">Superman (dos)</span><span class="exo-detail">4 séries × 15 reps</span></li>
+      <li class="exo-item" onclick="openModal('rowing-table','4 séries × 12 reps')"><span class="exo-name">Rowing inversé sous table</span><span class="exo-detail">4 séries × 12 reps</span></li>
+      <li class="exo-item" onclick="openModal('good-morning','3 séries × 15 reps')"><span class="exo-name">Good morning (corps)</span><span class="exo-detail">3 séries × 15 reps</span></li>
+      <li class="exo-item" onclick="openModal('curl-biceps','4 séries × 15 reps')"><span class="exo-name">Curl biceps (bouteilles 1.5L)</span><span class="exo-detail">4 séries × 15 reps</span></li>
+      <li class="exo-item" onclick="openModal('mountain-climbers','3 × 30 secondes')"><span class="exo-name">Mountain climbers</span><span class="exo-detail">3 × 30 secondes</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header"><div><div class="day-name">Samedi</div><div class="day-date">3 MAI</div></div><span class="day-tag tag-legs">Jambes</span></div>
+  <div class="day-body">
+    <div class="session-title">🦵 Jambes + Gainage</div>
+    <ul class="exo-list">
+      <li class="exo-item" onclick="openModal('squat','4 séries × 20 reps')"><span class="exo-name">Squats</span><span class="exo-detail">4 séries × 20 reps</span></li>
+      <li class="exo-item" onclick="openModal('fentes','3 séries × 16 reps')"><span class="exo-name">Fentes avant alternées</span><span class="exo-detail">3 séries × 16 reps</span></li>
+      <li class="exo-item" onclick="openModal('squats-sautes','3 séries × 15 reps')"><span class="exo-name">Squats sautés</span><span class="exo-detail">3 séries × 15 reps</span></li>
+      <li class="exo-item" onclick="openModal('pont-fessier','4 séries × 20 reps')"><span class="exo-name">Pont fessier</span><span class="exo-detail">4 séries × 20 reps</span></li>
+      <li class="exo-item" onclick="openModal('crunchs','4 séries × 20 reps')"><span class="exo-name">Crunchs</span><span class="exo-detail">4 séries × 20 reps</span></li>
+      <li class="exo-item" onclick="openModal('planche-laterale','3 × 30s chaque côté')"><span class="exo-name">Planche latérale</span><span class="exo-detail">3 × 30s chaque côté</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="day-card rest">
+  <div class="day-header"><div><div class="day-name">Dimanche</div><div class="day-date">4 MAI</div></div><span class="day-tag tag-rest">Repos</span></div>
+  <div class="day-body"><p class="rest-text">Récupération active : marche, étirements 15–20 min.</p></div>
+</div>
+
+<div class="day-card">
+  <div class="day-header"><div><div class="day-name">Lundi</div><div class="day-date">5 MAI</div></div><span class="day-tag tag-push">Push</span></div>
+  <div class="day-body">
+    <div class="session-title">💥 Épaules & Triceps</div>
+    <ul class="exo-list">
+      <li class="exo-item" onclick="openModal('pike-push-up','4 séries × 12 reps')"><span class="exo-name">Pike push-ups</span><span class="exo-detail">4 séries × 12 reps</span></li>
+      <li class="exo-item" onclick="openModal('handstand-push-up','3 séries × 6–8 reps')"><span class="exo-name">Handstand push-up (mur)</span><span class="exo-detail">3 séries × 6–8 reps</span></li>
+      <li class="exo-item" onclick="openModal('dips-chaise','4 séries × 15 reps')"><span class="exo-name">Dips sur chaise</span><span class="exo-detail">4 séries × 15 reps</span></li>
+      <li class="exo-item" onclick="openModal('pompes-declinees','3 séries × 12 reps')"><span class="exo-name">Pompes déclinées</span><span class="exo-detail">3 séries × 12 reps (pieds surélevés)</span></li>
+      <li class="exo-item" onclick="openModal('extensions-triceps','3 séries × 12 reps')"><span class="exo-name">Extensions triceps sol</span><span class="exo-detail">3 séries × 12 reps</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header"><div><div class="day-name">Mardi</div><div class="day-date">6 MAI</div></div><span class="day-tag tag-cardio">Cardio</span></div>
+  <div class="day-body">
+    <div class="session-title">⚡ Cardio + Core</div>
+    <ul class="exo-list">
+      <li class="exo-item" onclick="openModal('burpees','5 séries × 10 reps')"><span class="exo-name">Burpees</span><span class="exo-detail">5 séries × 10 reps</span></li>
+      <li class="exo-item" onclick="openModal('jumping-jacks','3 × 45 secondes')"><span class="exo-name">Jumping jacks</span><span class="exo-detail">3 × 45 secondes</span></li>
+      <li class="exo-item" onclick="openModal('mountain-climbers','4 × 30 secondes')"><span class="exo-name">Mountain climbers</span><span class="exo-detail">4 × 30 secondes</span></li>
+      <li class="exo-item" onclick="openModal('crunchs-velo','4 séries × 20 reps')"><span class="exo-name">Crunchs vélo</span><span class="exo-detail">4 séries × 20 reps</span></li>
+      <li class="exo-item" onclick="openModal('leg-raises','4 séries × 15 reps')"><span class="exo-name">Leg raises</span><span class="exo-detail">4 séries × 15 reps</span></li>
+      <li class="exo-item" onclick="openModal('planche','3 × 60 secondes')"><span class="exo-name">Planche</span><span class="exo-detail">3 × 60 secondes</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="day-card">
+  <div class="day-header"><div><div class="day-name">Mercredi</div><div class="day-date">7 MAI</div></div><span class="day-tag tag-full">Full Body</span></div>
+  <div class="day-body">
+    <div class="session-title">🏋️ Full Body Express</div>
+    <ul class="exo-list">
+      <li class="exo-item" onclick="openModal('pompes-classiques','3 séries × 15 reps')"><span class="exo-name">Pompes classiques</span><span class="exo-detail">3 séries × 15 reps</span></li>
+      <li class="exo-item" onclick="openModal('squat','3 séries × 15 reps')"><span class="exo-name">Squats</span><span class="exo-detail">3 séries × 15 reps</span></li>
+      <li class="exo-item" onclick="openModal('dips-chaise','3 séries × 12 reps')"><span class="exo-name">Dips chaise</span><span class="exo-detail">3 séries × 12 reps</span></li>
+      <li class="exo-item" onclick="openModal('fentes','3 séries × 12 reps')"><span class="exo-name">Fentes</span><span class="exo-detail">3 séries × 12 reps chaque jambe</span></li>
+      <li class="exo-item" onclick="openModal('superman','3 séries × 15 reps')"><span class="exo-name">Superman</span><span class="exo-detail">3 séries × 15 reps</span></li>
+      <li class="exo-item" onclick="openModal('planche','3 × 45 secondes')"><span class="exo-name">Planche</span><span class="exo-detail">3 × 45 secondes</span></li>
+    </ul>
+  </div>
+</div>
+```
+
+  </div>
+</div>
+
+<!-- BONUS SEMAINES 2–4 RÉSUMÉES (pour la démo) -->
+
+<div class="semaine">
+  <div class="semaine-header">
+    <div class="semaine-num">S2–S4</div>
+    <div><div class="semaine-title">Progression progressive au fil des semaines</div><div style="font-size:13px;color:var(--muted);margin-top:2px">S2 = +1 série · S3 = supersets · S4 = drop sets, tout jusqu'à l'échec. Tous les exos des semaines 2–4 utilisent les mêmes mouvements : clique dessus pour avoir le détail complet.</div></div>
+  </div>
+  <div style="padding: 20px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; color: var(--muted); line-height: 1.8;">
+    <p>Clique sur <strong>n'importe quel exercice</strong> dans le programme pour voir comment l'exécuter correctement, avec :</p>
+    <ul style="margin-left: 20px; margin-top: 12px;">
+      <li>✅ Image ou GIF du mouvement</li>
+      <li>✅ Muscles ciblés (principaux + secondaires)</li>
+      <li>✅ Étapes détaillées d'exécution</li>
+      <li>✅ Astuces pour progresser sans se blesser</li>
+    </ul>
+    <p style="margin-top: 12px;"><strong>Les semaines 2–4 suivent la même structure</strong> avec une intensité qui augmente chaque semaine. Le détail complet du programme de 4 semaines est dans le modal de chaque exo.</p>
+  </div>
+</div>
+
+<!-- TIPS -->
+
+<div class="tips-section">
+  <div class="tips-title">CONSEILS ESSENTIELS</div>
+  <div class="tips-grid">
+    <div class="tip-card"><h4>🍗 Nutrition</h4><p>1,6–2g de protéines par kg de poids. Poulet, œufs, thon. Sans ça, les muscles ne poussent pas.</p></div>
+    <div class="tip-card"><h4>💤 Sommeil</h4><p>7–8h par nuit. Le muscle se construit pendant le repos, pas pendant l'entraînement.</p></div>
+    <div class="tip-card"><h4>💧 Hydratation</h4><p>Minimum 2,5L d'eau par jour. Déshydraté = -20% de performance.</p></div>
+    <div class="tip-card"><h4>🎯 Progression</h4><p>+1 rep de plus chaque séance. C'est la règle d'or de la musculation poids du corps.</p></div>
+    <div class="tip-card"><h4>⚽ Foot + Muscu</h4><p>Match le même jour ? Fais la muscu le matin. Ne sacrifie pas le foot.</p></div>
+    <div class="tip-card"><h4>🔥 Échauffement</h4><p>5–10 min avant : rotations d'épaules, bras en croix, squats légers. Obligatoire.</p></div>
+  </div>
+</div>
+
+</div><!-- end container -->
+
+<!-- ============================== MODAL ============================== -->
+
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal" id="modal">
+    <div class="modal-close"><button class="close-btn" onclick="closeModal()">✕</button></div>
+    <div class="modal-img-wrap" id="modalImgWrap">
+      <div class="modal-img-placeholder"><span>💪</span><p>Chargement de l'image...</p></div>
+    </div>
+    <div class="modal-content">
+      <div class="modal-exo-name" id="modalName">—</div>
+      <div class="modal-series" id="modalSeries">—</div>
+      <div class="modal-section-title">MUSCLES CIBLÉS</div>
+      <div class="muscles-list" id="modalMuscles"></div>
+      <div class="modal-section-title">COMMENT FAIRE</div>
+      <ul class="steps-list" id="modalSteps"></ul>
+      <div class="tip-box" id="modalTip"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const EXO_DATA = {
+    'pompes-classiques': {
+      name: 'Pompes Classiques',
+      img: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&q=80',
+      muscles: ['Pectoraux', 'Triceps', 'Épaules antérieures'],
+      secondary: ['Abdos', 'Gainage'],
+      steps: [
+        'Positionne tes mains à la largeur des épaules (ou légèrement plus large), doigts vers l\'avant.',
+        'Corps aligné de la tête aux pieds, abdos contractés, fesses ni trop hautes ni trop basses.',
+        'Descends jusqu\'à ce que ta poitrine effleure le sol (ou soit à 2–3 cm).',
+        'Pousse en expirant, bras tendus sans verrouiller les coudes. Répète.',
+      ],
+      tip: '<strong>Astuce :</strong> Si tu n\'arrives pas à faire les reps, passe aux pompes sur genoux. L\'essentiel c\'est de garder le dos droit et de descendre vraiment bas.'
+    },
+    'pompes-larges': {
+      name: 'Pompes Larges',
+      img: 'https://images.unsplash.com/photo-1576678927484-cc907957a753?w=500&q=80',
+      muscles: ['Pectoraux externes'],
+      secondary: ['Épaules', 'Triceps'],
+      steps: [
+        'Mains nettement plus larges que les épaules — environ 1,5× la largeur des épaules.',
+        'Coudes orientés vers l\'extérieur à 45–60° du corps (pas à 90°).',
+        'Descends lentement en contrôlant, pectoraux bien étirés en bas.',
+        'Pousse fort en expirant, sens les pecs se contracter au sommet.',
+      ],
+      tip: '<strong>Focus :</strong> Pense à "pincer" quelque chose entre tes pecs en montant. Ça améliore le recrutement musculaire.'
+    },
+    'pompes-diamant': {
+      name: 'Pompes Diamant',
+      img: 'https://images.unsplash.com/photo-1549576528-b34be7f84fa3?w=500&q=80',
+      muscles: ['Triceps', 'Pectoraux internes'],
+      secondary: ['Épaules antérieures'],
+      steps: [
+        'Forme un losange (diamant) avec tes pouces et index joints, mains sous le sternum.',
+        'Corps aligné, coudes proches du corps tout au long du mouvement.',
+        'Descends lentement jusqu\'à ce que ton sternum approche tes mains.',
+        'Pousse en expirant, triceps bien contractés en haut.',
+      ],
+      tip: '<strong>Attention :</strong> C\'est un mouvement difficile pour les poignets. Si tu ressens de la douleur, écarte légèrement les mains.'
+    },
+    'pompes-declinees': {
+      name: 'Pompes Déclinées',
+      img: 'https://images.unsplash.com/photo-1574680096145-cba7df27f372?w=500&q=80',
+      muscles: ['Pectoraux supérieurs', 'Épaules antérieures'],
+      secondary: ['Triceps', 'Gainage'],
+      steps: [
+        'Place les pieds sur une chaise ou canapé (40–60 cm de hauteur), mains au sol à largeur d\'épaules.',
+        'Corps incliné, tête en bas — c\'est ce qui cible le haut des pecs.',
+        'Descends jusqu\'à ce que le nez touche presque le sol.',
+        'Pousse fort et contrôlé.',
+      ],
+      tip: '<strong>Progression :</strong> Plus tes pieds sont hauts, plus c\'est difficile et plus ça cible le haut des pecs et les épaules.'
+    },
+    'pompes-clap': {
+      name: 'Pompes Clap Explosives',
+      img: 'https://images.unsplash.com/photo-1595727057893-bdbf9e62ead0?w=500&q=80',
+      muscles: ['Pectoraux', 'Triceps', 'Fibres rapides'],
+      secondary: ['Épaules', 'Réflexes neuromusculaires'],
+      steps: [
+        'Position de pompe classique.',
+        'Descends rapidement et explose en poussant aussi fort que possible pour décoller les mains.',
+        'Tape dans tes mains pendant que tu es en l\'air.',
+        'Réceptionne avec les coudes légèrement fléchis pour absorber l\'impact. Répète.',
+      ],
+      tip: '<strong>Sécurité :</strong> Ne fais pas cet exo si tu es fatigué. L\'impact au sol peut blesser les poignets si la réception est mauvaise.'
+    },
+    'pike-push-up': {
+      name: 'Pike Push-Up',
+      img: 'https://images.unsplash.com/photo-1597462632000-b94f2e0e7069?w=500&q=80',
+      muscles: ['Deltoïdes (épaules)', 'Trapèzes'],
+      secondary: ['Triceps', 'Dorsaux'],
+      steps: [
+        'Forme un "V" inversé avec ton corps — fesses très hautes, pieds et mains au sol.',
+        'Garde les jambes les plus droites possible, talons au sol si tu peux.',
+        'Fléchis les coudes pour descendre la tête vers le sol (entre les mains).',
+        'Pousse en relevant les hanches, retour au V inversé.',
+      ],
+      tip: '<strong>Progression :</strong> Plus tes pieds sont proches de tes mains, plus l\'angle ressemble au handstand — et plus c\'est difficile pour les épaules.'
+    },
+    'handstand-push-up': {
+      name: 'Handstand Push-Up',
+      img: 'https://images.unsplash.com/photo-1601422407692-d47cbbb4e449?w=500&q=80',
+      muscles: ['Deltoïdes', 'Trapèzes', 'Triceps'],
+      secondary: ['Core', 'Stabilisateurs'],
+      steps: [
+        'Place-toi dos au mur, mains à environ 30 cm du mur, à largeur d\'épaules.',
+        'Monte en équilibre tête en bas (appui contre le mur pour la sécurité).',
+        'Descends lentement jusqu\'à ce que ta tête approche le sol.',
+        'Pousse fort en expirant, bras tendus en haut.',
+      ],
+      tip: '<strong>Débutant :</strong> Commence avec le pike push-up jusqu\'à maîtriser le mouvement. Le HSPU est l\'un des exos poids du corps les plus exigeants pour les épaules.'
+    },
+    'dips-chaise': {
+      name: 'Dips sur Chaise',
+      img: 'https://images.unsplash.com/photo-1598971457318-6b8a40e30b6b?w=500&q=80',
+      muscles: ['Triceps', 'Pectoraux inférieurs'],
+      secondary: ['Deltoïdes antérieurs'],
+      steps: [
+        'Assis au bord d\'une chaise solide, mains en appui sur le bord, doigts vers l\'avant.',
+        'Glisse vers l\'avant, jambes tendues ou fléchies selon le niveau.',
+        'Descends en fléchissant les coudes jusqu\'à 90°, coudes vers l\'arrière (pas sur les côtés).',
+        'Pousse avec les triceps pour remonter. Ne verrouille pas les coudes en haut.',
+      ],
+      tip: '<strong>Plus dur :</strong> Pieds surélevés sur une deuxième chaise pour augmenter l\'intensité.'
+    },
+    'extensions-triceps': {
+      name: 'Extensions Triceps au Sol',
+      img: 'https://images.unsplash.com/photo-1617309768303-c5f0a26297fa?w=500&q=80',
+      muscles: ['Triceps (tous les chefs)'],
+      secondary: ['Coudes'],
+      steps: [
+        'Allonge-toi sur le dos, bras tendus à la verticale (bouteilles ou juste les bras).',
+        'Fléchis les coudes pour descendre les mains vers les oreilles, coudes fixes et pointés vers le plafond.',
+        'Remonte en contractant les triceps, bras tendus. Coudes immobiles !',
+        'Mouvement lent et contrôlé, surtout en descente.',
+      ],
+      tip: '<strong>Clé :</strong> Les coudes ne bougent pas. Seuls les avant-bras se déplacent. Si les coudes s\'écartent, tu trimes avec les épaules.'
+    },
+    'superman': {
+      name: 'Superman',
+      img: 'https://images.unsplash.com/photo-1566241440501-f74fc6a4d36e?w=500&q=80',
+      muscles: ['Érecteurs du rachis', 'Lombaires', 'Fessiers'],
+      secondary: ['Trapèzes', 'Rhomboïdes'],
+      steps: [
+        'Allonge-toi face au sol, bras tendus devant toi, jambes droites.',
+        'Contracte ton dos et soulève simultanément les bras et les jambes du sol.',
+        'Tiens la position 1 à 3 secondes en haut, dos bien contracté.',
+        'Redescends lentement et répète.',
+      ],
+      tip: '<strong>Important :</strong> Ne force pas avec le cou. Garde la nuque dans le prolongement de la colonne. Pense à "t\'élirer" plutôt qu\'à monter haut.'
+    },
+    'rowing-table': {
+      name: 'Rowing Inversé (Table)',
+      img: 'https://images.unsplash.com/photo-1614008375890-cb53b6c5f8d5?w=500&q=80',
+      muscles: ['Dorsaux', 'Biceps', 'Rhomboïdes'],
+      secondary: ['Trapèzes', 'Brachial'],
+      steps: [
+        'Glisse-toi sous une table solide, mains accrochées au bord, corps incliné sous la table.',
+        'Corps aligné (pieds au sol, corps droit), bras tendus en position de départ.',
+        'Tire-toi vers la table en rentrant les coudes le long du corps.',
+        'Redescends lentement à bras tendus.',
+      ],
+      tip: '<strong>Progression :</strong> Plus tes pieds sont éloignés (corps plus horizontal), plus c\'est dur. Pieds sur une chaise = niveau avancé.'
+    },
+    'curl-biceps': {
+      name: 'Curl Biceps (Bouteilles)',
+      img: 'https://images.unsplash.com/photo-1583454110551-21a55129d71a?w=500&q=80',
+      muscles: ['Biceps', 'Brachial antérieur'],
+      secondary: ['Avant-bras'],
+      steps: [
+        'Debout, une bouteille (1,5L) dans chaque main, paumes vers le haut, bras le long du corps.',
+        'Fléchis les coudes en remontant les bouteilles vers les épaules. Coudes collés au corps.',
+        'Tiens 1 seconde en haut, biceps contractés au maximum.',
+        'Redescends lentement (2–3 secondes) pour maximiser le travail excentrique.',
+      ],
+      tip: '<strong>Triche interdite :</strong> Ne balance pas le dos pour monter. Si tu balances, la bouteille est trop lourde — remplis-la moins.'
+    },
+    'curl-marteau': {
+      name: 'Curl Marteau',
+      img: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=500&q=80',
+      muscles: ['Brachial antérieur', 'Brachio-radial'],
+      secondary: ['Biceps'],
+      steps: [
+        'Debout, bouteilles en main, pouces vers le haut (prise neutre — comme un marteau).',
+        'Fléchis les coudes alternativement ou simultanément.',
+        'Coudes fixes contre le corps tout au long du mouvement.',
+        'Descends lentement pour maximiser le travail.',
+      ],
+      tip: '<strong>Avantage :</strong> Le curl marteau est souvent sous-estimé mais il épaissit vraiment les bras car il cible le brachial, muscle entre le biceps et le triceps.'
+    },
+    'curl-concentre': {
+      name: 'Curl Concentré',
+      img: 'https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?w=500&q=80',
+      muscles: ['Biceps (pic)'],
+      secondary: ['Brachial'],
+      steps: [
+        'Assis sur une chaise, coude appuyé contre la cuisse intérieure.',
+        'Bouteille en main, paume vers le haut, bras quasi vertical.',
+        'Fléchis lentement jusqu\'en haut, biceps bien contracté.',
+        'Descends très lentement (4 secondes) — c\'est ici que ça pousse.',
+      ],
+      tip: '<strong>Secret :</strong> C\'est l\'exo préféré pour le "pic" du biceps. Va lentement en descente et tourne légèrement le poignet vers l\'extérieur en haut.'
+    },
+    'good-morning': {
+      name: 'Good Morning',
+      img: 'https://images.unsplash.com/photo-1586919373161-c5d54d1f5f6d?w=500&q=80',
+      muscles: ['Ischio-jambiers', 'Lombaires', 'Fessiers'],
+      secondary: ['Érecteurs du rachis'],
+      steps: [
+        'Debout, pieds écartés à largeur d\'épaules, mains derrière la tête ou sur les hanches.',
+        'Penche le buste vers l\'avant en gardant le dos DROIT (comme une charnière à la hanche).',
+        'Descends jusqu\'à ce que ton buste soit parallèle au sol (ou jusqu\'à ta flexibilité).',
+        'Reviens debout en poussant les hanches vers l\'avant.',
+      ],
+      tip: '<strong>Erreur fréquente :</strong> Arrondir le dos. Si tu ne peux pas garder le dos droit, fléchis légèrement les genoux.'
+    },
+    'squat': {
+      name: 'Squat',
+      img: 'https://images.unsplash.com/photo-1566998135326-5b94d5d5625d?w=500&q=80',
+      muscles: ['Quadriceps', 'Fessiers', 'Ischio-jambiers'],
+      secondary: ['Mollets', 'Core'],
+      steps: [
+        'Pieds écartés à largeur d\'épaules (ou légèrement plus), orteils légèrement tournés vers l\'extérieur.',
+        'Descends comme si tu voulais t\'asseoir sur une chaise : hanches en arrière et bas.',
+        'Genoux dans l\'axe des orteils — ne les laisse pas rentrer vers l\'intérieur.',
+        'Descends jusqu\'à ce que les cuisses soient parallèles au sol (ou plus bas si possible). Remonte.',
+      ],
+      tip: '<strong>Objectif :</strong> Cuisses parallèles minimum. Talon qui décolle = manque de mobilité de cheville. Essaie de poser les talons sur une petite planche.'
+    },
+    'squats-sautes': {
+      name: 'Squats Sautés',
+      img: 'https://images.unsplash.com/photo-1609033227505-5876f6aa4e90?w=500&q=80',
+      muscles: ['Quadriceps', 'Fessiers', 'Mollets'],
+      secondary: ['Fibres rapides', 'Système cardio'],
+      steps: [
+        'Descends en squat normal (cuisses parallèles).',
+        'Explose vers le haut en sautant aussi haut que possible.',
+        'Bras qui accompagnent le mouvement vers le haut.',
+        'Réceptionne en douceur en fléchissant les genoux — ne tombe pas sur des jambes raides.',
+      ],
+      tip: '<strong>Pour le foot :</strong> Cet exercice développe exactement le même explosivité que pour les accélérations et les duels.'
+    },
+    'squat-bulgare': {
+      name: 'Squat Bulgare',
+      img: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=500&q=80',
+      muscles: ['Quadriceps', 'Fessiers (fesse arrière++)'],
+      secondary: ['Équilibre', 'Ischio-jambiers'],
+      steps: [
+        'Debout dos à la chaise, pose le cou-de-pied de la jambe arrière sur le bord.',
+        'Avance suffisamment avec la jambe avant pour avoir une grande foulée.',
+        'Descends en fléchissant le genou avant, genou arrière qui descend vers le sol.',
+        'Remonte en poussant sur le talon avant. Garde le buste droit.',
+      ],
+      tip: '<strong>Attention :</strong> Le genou avant ne doit pas dépasser les orteils. Si oui, avance encore plus le pied avant.'
+    },
+    'fentes': {
+      name: 'Fentes Avant',
+      img: 'https://images.unsplash.com/photo-1557804506-669714157495?w=500&q=80',
+      muscles: ['Quadriceps', 'Fessiers', 'Ischio-jambiers'],
+      secondary: ['Équilibre', 'Mollets'],
+      steps: [
+        'Debout, pieds joints. Fais un grand pas vers l\'avant.',
+        'Descends en pliant les deux genoux jusqu\'à ce que le genou arrière frôle le sol.',
+        'Genou avant dans l\'axe du pied, pas vers l\'intérieur.',
+        'Pousse sur le talon avant pour revenir, puis alterne les jambes.',
+      ],
+      tip: '<strong>Variation :</strong> Fentes marchées — tu avances à chaque répétition au lieu de revenir. Encore plus fonctionnel pour le football.'
+    },
+    'fentes-sautees': {
+      name: 'Fentes Sautées',
+      img: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d3b?w=500&q=80',
+      muscles: ['Quadriceps', 'Fessiers', 'Mollets'],
+      secondary: ['Fibres explosives', 'Cardio'],
+      steps: [
+        'Commence en position de fente (une jambe avant, une arrière).',
+        'Saute verticalement en changeant la position des jambes en l\'air.',
+        'Réceptionne dans la position de fente opposée, genou arrière près du sol.',
+        'Répète en continu sans pause.',
+      ],
+      tip: '<strong>Sécurité :</strong> Réceptionne toujours avec les genoux légèrement fléchis pour protéger les articulations.'
+    },
+    'fentes-laterales': {
+      name: 'Fentes Latérales',
+      img: 'https://images.unsplash.com/photo-1570813831949-f1f96e45d71d?w=500&q=80',
+      muscles: ['Adducteurs', 'Quadriceps', 'Fessiers'],
+      secondary: ['Ischio-jambiers', 'Mobilité hanche'],
+      steps: [
+        'Debout, pieds joints. Fais un grand pas vers le côté.',
+        'Penche le buste légèrement vers l\'avant, plie le genou de la jambe qui a bougé.',
+        'L\'autre jambe reste droite, pied à plat au sol.',
+        'Pousse sur le pied qui a bougé pour revenir au centre.',
+      ],
+      tip: '<strong>Pour le foot :</strong> Excellent pour la mobilité latérale et prévenir les blessures aux adducteurs, très fréquentes chez les footballeurs.'
+    },
+    'pont-fessier': {
+      name: 'Pont Fessier',
+      img: 'https://images.unsplash.com/photo-1552505073-c6b3dcd7f9a7?w=500&q=80',
+      muscles: ['Fessiers', 'Ischio-jambiers'],
+      secondary: ['Lombaires', 'Core'],
+      steps: [
+        'Allongé sur le dos, genoux fléchis à 90°, pieds à plat au sol, bras le long du corps.',
+        'Contracte les fessiers et pousse les hanches vers le plafond.',
+        'En haut, corps droit de l\'épaule au genou. Tiens 1–2 secondes.',
+        'Redescends lentement, fesses touchent à peine le sol, répète.',
+      ],
+      tip: '<strong>Progression :</strong> Version unilatérale (une jambe levée) = 3× plus difficile et excellent pour l\'équilibre musculaire.'
+    },
+    'nordic-curl': {
+      name: 'Nordic Curl',
+      img: 'https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=500&q=80',
+      muscles: ['Ischio-jambiers (excentrique++)'],
+      secondary: ['Lombaires', 'Mollets'],
+      steps: [
+        'À genoux, pieds bloqués sous un canapé ou tenus par quelqu\'un.',
+        'Corps droit, mains croisées sur la poitrine.',
+        'Descends lentement vers le sol en résistant avec les ischio-jambiers.',
+        'Quand tu ne peux plus tenir, pose les mains et remonte en poussant. Répète.',
+      ],
+      tip: '<strong>Scientifiquement prouvé</strong> pour réduire les blessures aux ischio-jambiers chez les footballeurs de -50%. Fais-le même si c\'est difficile au début.'
+    },
+    'crunchs': {
+      name: 'Crunchs',
+      img: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=500&q=80',
+      muscles: ['Droit abdominal'],
+      secondary: ['Obliques'],
+      steps: [
+        'Allongé sur le dos, genoux fléchis, pieds à plat. Mains derrière la nuque ou croisées sur la poitrine.',
+        'Expire en contractant les abdos pour relever les épaules du sol.',
+        'Ne tire pas sur la nuque avec les mains — laisse les abdos faire le travail.',
+        'Tiens 1 seconde en haut, redescends lentement.',
+      ],
+      tip: '<strong>Erreur :</strong> Beaucoup montent trop haut et perdent la contraction abdominale. 30° de montée avec une vraie contraction > 90° avec de l\'élan.'
+    },
+    'crunchs-velo': {
+      name: 'Crunchs Vélo',
+      img: 'https://images.unsplash.com/photo-1550259987-943a25ca89ff?w=500&q=80',
+      muscles: ['Obliques', 'Droit abdominal'],
+      secondary: ['Hip flexors'],
+      steps: [
+        'Allongé sur le dos, mains derrière la tête, jambes levées.',
+        'Amène le coude droit vers le genou gauche en fléchissant.',
+        'Alterne : coude gauche vers genou droit.',
+        'Mouvement fluide, rotation du buste (pas juste du coude). Jambes qui "pédalent".',
+      ],
+      tip: '<strong>Classé n°1</strong> par l\'ACE pour l\'activation des obliques. Va lentement — c\'est la qualité qui compte, pas la vitesse.'
+    },
+    'leg-raises': {
+      name: 'Leg Raises',
+      img: 'https://images.unsplash.com/photo-1554284147-83f2b92b6fb0?w=500&q=80',
+      muscles: ['Droit abdominal (bas)', 'Hip flexors'],
+      secondary: ['Obliques'],
+      steps: [
+        'Allongé sur le dos, mains sous les fesses (ou bras le long du corps), jambes droites.',
+        'Soulève les jambes jusqu\'à 90° (perpendiculaires au sol).',
+        'Redescends lentement — ne pose pas les pieds complètement au sol.',
+        'Garde le bas du dos plaqué au sol tout le temps.',
+      ],
+      tip: '<strong>Si trop dur :</strong> Plie légèrement les genoux. Si trop facile, descends les jambes très bas (à 10 cm du sol) sans les poser.'
+    },
+    'planche': {
+      name: 'Planche (Gainage)',
+      img: 'https://images.unsplash.com/photo-1588286840104-8957b019727f?w=500&q=80',
+      muscles: ['Transverse abdominal', 'Core complet'],
+      secondary: ['Épaules', 'Dos', 'Fessiers'],
+      steps: [
+        'En appui sur les avant-bras (ou les mains), coudes sous les épaules.',
+        'Corps parfaitement aligné de la tête aux pieds — pas de cambrure, pas de fesses en l\'air.',
+        'Contracte les abdos, les fessiers et les cuisses simultanément.',
+        'Respire normalement. Tiens le temps voulu.',
+      ],
+      tip: '<strong>Visualisation :</strong> Imagine que tu veux empêcher quelqu\'un de te passer un bâton sous ton ventre. Ça aide à maintenir la tension abdominale.'
+    },
+    'planche-laterale': {
+      name: 'Planche Latérale',
+      img: 'https://images.unsplash.com/photo-1566241440501-f74fc6a4d36e?w=500&q=80',
+      muscles: ['Obliques', 'Quadratus lumborum'],
+      secondary: ['Épaules', 'Fessiers', 'Adducteurs'],
+      steps: [
+        'Sur le côté, en appui sur un avant-bras, coude sous l\'épaule.',
+        'Empile les pieds l\'un sur l\'autre (ou l\'un devant l\'autre pour plus de stabilité).',
+        'Soulève les hanches pour aligner le corps de la tête aux pieds.',
+        'Ne laisse pas les hanches tomber. Tiens.',
+      ],
+      tip: '<strong>Variation :</strong> Pour rendre plus difficile, lève la jambe supérieure pendant la tenue.'
+    },
+    'burpees': {
+      name: 'Burpees',
+      img: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&q=80',
+      muscles: ['Full body', 'Cardio'],
+      secondary: ['Pecs', 'Fessiers', 'Épaules', 'Abdos'],
+      steps: [
+        'Debout. Descends les mains au sol (squat profond).',
+        'Saute les pieds vers l\'arrière — position de pompe.',
+        'Fais une pompe (optionnel selon intensité voulue).',
+        'Saute les pieds vers les mains, puis saute verticalement les bras au-dessus de la tête.',
+      ],
+      tip: '<strong>L\'exercice roi</strong> du cardio maison. 10 min de burpees brûlent autant de calories que 30 min de course à pied. Garde un rythme constant.'
+    },
+    'mountain-climbers': {
+      name: 'Mountain Climbers',
+      img: 'https://images.unsplash.com/photo-1584622181563-430f63602d4b?w=500&q=80',
+      muscles: ['Core', 'Hip flexors', 'Cardio'],
+      secondary: ['Pecs', 'Épaules', 'Quadriceps'],
+      steps: [
+        'En position de pompe, bras tendus, corps aligné.',
+        'Ramène un genou vers ta poitrine, puis l\'autre alternativement.',
+        'Mouvement rapide, comme si tu courais en position horizontale.',
+        'Hanches stables — ne les laisse pas monter ou bouger de gauche à droite.',
+      ],
+      tip: '<strong>Pour le foot :</strong> Excellent pour la coordination genou-hanche et le cardio spécifique aux mouvements de course.'
+    },
+    'jumping-jacks': {
+      name: 'Jumping Jacks',
+      img: 'https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=500&q=80',
+      muscles: ['Cardio général', 'Épaules'],
+      secondary: ['Mollets', 'Adducteurs'],
+      steps: [
+        'Debout, pieds joints, bras le long du corps.',
+        'Saute en écartant les pieds à largeur d\'épaules et les bras au-dessus de la tête.',
+        'Saute à nouveau pour revenir à la position de départ.',
+        'Rythme régulier, respiration contrôlée.',
+      ],
+      tip: '<strong>Échauffement parfait :</strong> Commence toujours avec 30–60 secondes de jumping jacks pour activer le système cardio avant une séance.'
+    },
+    'sprint-place': {
+      name: 'Sprint sur Place',
+      img: 'https://images.unsplash.com/photo-1524136414534-36522d4ac248?w=500&q=80',
+      muscles: ['Hip flexors', 'Cardio maximal'],
+      secondary: ['Quadriceps', 'Mollets', 'Core'],
+      steps: [
+        'Debout, pieds écartés à largeur de hanches.',
+        'Cours sur place en montant les genoux le plus haut possible (idéalement à hauteur de hanche).',
+        'Bras qui accompagnent comme une vraie course.',
+        'Rythme maximal — c\'est un sprint, pas un footing.',
+      ],
+      tip: '<strong>Variante Tabata :</strong> 20s à fond, 10s de repos, répété 8 fois. Extrêmement efficace pour brûler les graisses et améliorer le cardio football.'
+    },
+    'v-ups': {
+      name: 'V-Ups',
+      img: 'https://images.unsplash.com/photo-1599822260395-12dceac18df5?w=500&q=80',
+      muscles: ['Droit abdominal complet', 'Hip flexors'],
+      secondary: ['Obliques', 'Équilibre'],
+      steps: [
+        'Allongé sur le dos, bras tendus au-dessus de la tête, jambes droites.',
+        'Soulève simultanément les jambes droites et le buste vers le plafond.',
+        'Essaie de toucher tes orteils avec tes doigts au sommet.',
+        'Forme un "V" avec ton corps. Redescends lentement.',
+      ],
+      tip: '<strong>Difficile ?</strong> Commence avec les genoux légèrement fléchis. C\'est l\'un des meilleurs exos pour le pack abdominal complet.'
+    },
+    'russian-twists': {
+      name: 'Russian Twists',
+      img: 'https://images.unsplash.com/photo-1587280591945-13e3a4a0b27f?w=500&q=80',
+      muscles: ['Obliques', 'Droit abdominal'],
+      secondary: ['Hip flexors', 'Rotation du tronc'],
+      steps: [
+        'Assis sur le sol, genoux fléchis, pieds légèrement levés (ou posés au sol).',
+        'Penche le buste à environ 45° vers l\'arrière.',
+        'Tourne le buste de gauche à droite, mains jointes ou bouteille dans les mains.',
+        'À chaque rotation, essaie de toucher le sol de chaque côté.',
+      ],
+      tip: '<strong>Pour le foot :</strong> La rotation du tronc est essentielle pour les passes, les tirs et les changements de direction. Cet exo est directement transférable.'
+    },
+    'elevation-laterale': {
+      name: 'Élévations Latérales',
+      img: 'https://images.unsplash.com/photo-1609899234237-f1915db2c6d4?w=500&q=80',
+      muscles: ['Deltoïdes moyens (épaules larges)'],
+      secondary: ['Trapèzes', 'Avant-bras'],
+      steps: [
+        'Debout, une bouteille dans chaque main, bras le long du corps, paumes vers l\'intérieur.',
+        'Lève les bras latéralement jusqu\'à la hauteur des épaules (ne monte pas plus haut).',
+        'En haut, le pouce légèrement vers le bas (comme si tu versais de l\'eau).',
+        'Redescends lentement en 3–4 secondes.',
+      ],
+      tip: '<strong>Secret des épaules larges :</strong> Cet exo cible précisément le chef moyen du deltoïde, qui donne la largeur d\'épaule. Va lent, l\'important c\'est la tension musculaire.'
+    },
+    'elevation-frontale': {
+      name: 'Élévations Frontales',
+      img: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500&q=80',
+      muscles: ['Deltoïdes antérieurs'],
+      secondary: ['Pectoraux supérieurs', 'Avant-bras'],
+      steps: [
+        'Debout, bouteilles en main, bras tendus devant toi, paumes vers le bas.',
+        'Lève un bras (ou les deux) à hauteur des épaules, bras presque tendus.',
+        'Ne balance pas le dos — garder le buste stable.',
+        'Redescends lentement.',
+      ],
+      tip: '<strong>Complément :</strong> Combine avec les élévations latérales pour un développement complet de l\'épaule. Fait en superset c\'est redoutable.'
+    }
+  };
+
+  function openModal(id, series) {
+    const data = EXO_DATA[id];
+    if (!data) return;
+
+    document.getElementById('modalName').textContent = data.name;
+    document.getElementById('modalSeries').textContent = series || '';
+
+    const mw = document.getElementById('modalMuscles');
+    mw.innerHTML = data.muscles.map(m => `<span class="muscle-tag">${m}</span>`).join('') +
+      (data.secondary || []).map(m => `<span class="muscle-tag secondary">${m}</span>`).join('');
+
+    const sw = document.getElementById('modalSteps');
+    sw.innerHTML = data.steps.map((s, i) => `<li class="step"><span class="step-num">${i+1}</span><p>${s}</p></li>`).join('');
+
+    document.getElementById('modalTip').innerHTML = `<p>${data.tip}</p>`;
+
+    const iw = document.getElementById('modalImgWrap');
+    iw.innerHTML = `<div class="modal-img-placeholder"><span>⏳</span><p>Chargement...</p></div>`;
+    const img = new Image();
+    img.onload = () => { iw.innerHTML = ''; iw.appendChild(img); };
+    img.onerror = () => { iw.innerHTML = `<div class="modal-img-placeholder"><span>💪</span><p>Image non disponible<br><small style="font-size:10px;margin-top:4px;display:block">Cherche "${data.name}" sur YouTube pour voir la vidéo</small></p></div>`; };
+    img.src = data.img;
+    img.alt = data.name;
+    img.style.cssText = 'width:100%;max-height:260px;object-fit:contain;display:block;';
+
+    document.getElementById('modalOverlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function closeModalOutside(e) {
+    if (e.target === document.getElementById('modalOverlay')) closeModal();
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // Service Worker pour PWA
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('data:application/javascript,self.addEventListener("install",e=>self.skipWaiting());self.addEventListener("activate",e=>e.waitUntil(clients.claim()));');
+  }
+</script>
+
+</body>
+</html>
